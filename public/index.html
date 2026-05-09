@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verdi Bot — Asistente Inteligente de Inversiones Verdi</title>
+  <meta name="description" content="Demo del asistente inteligente de Inversiones Verdi - Suplementos Naturales Premium" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2310b981'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EV%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER LANDING -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="brand">
+          <div class="brand-logo">V</div>
+          <div>
+            <h1>Verdi Bot</h1>
+            <p class="tagline">Asistente inteligente · Inversiones Verdi</p>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">2 seg</div>
+            <div class="stat-label">Tiempo de respuesta</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Disponibilidad</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Clientes en paralelo</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- BENEFICIOS -->
+    <section class="benefits">
+      <div class="benefit">
+        <div class="benefit-icon">⚡</div>
+        <h3>Responde al instante</h3>
+        <p>El cliente nunca espera. Nada de "le respondemos cuando podamos".</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🧠</div>
+        <h3>Sabe todo del catálogo</h3>
+        <p>Productos, precios, dosis, ingredientes, advertencias, intolerancias.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">📦</div>
+        <h3>Conoce las políticas</h3>
+        <p>Envíos, pagos, devoluciones, cobertura. Todo. Siempre actualizado.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🎯</div>
+        <h3>Recomienda alternativas</h3>
+        <p>Si no tenemos lo que pide, ofrece algo similar o mejor de nuestra tienda.</p>
+      </div>
+    </section>
+
+    <!-- CHAT DEMO -->
+    <main class="chat-area">
+      <div class="chat-card">
+        <div class="chat-header">
+          <div class="chat-avatar">V</div>
+          <div class="chat-header-info">
+            <div class="chat-name">Verdi Bot</div>
+            <div class="chat-status">
+              <span class="status-dot"></span>
+              en línea · responde al instante
+            </div>
+          </div>
+          <button class="reset-btn" id="resetBtn" title="Nueva conversación">↻</button>
+        </div>
+
+        <div class="chat-messages" id="messages">
+          <!-- Mensaje inicial -->
+        </div>
+
+        <div class="suggested-questions" id="suggestedQuestions">
+          <button class="chip" data-q="Hola, ¿qué productos tienen?">¿Qué productos tienen?</button>
+          <button class="chip" data-q="Tengo gases e hinchazón después de comer">Gases e hinchazón</button>
+          <button class="chip" data-q="Hago delivery hoy si pago ahora?">Envío hoy</button>
+          <button class="chip" data-q="Algo para mi hijo que le ayude con la concentración">Algo para mi hijo</button>
+          <button class="chip" data-q="Tienen colágeno?">Tienen colágeno?</button>
+          <button class="chip" data-q="Cómo puedo pagar?">Formas de pago</button>
+        </div>
+
+        <form class="chat-input" id="chatForm">
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Escribe tu mensaje..."
+            autocomplete="off"
+            maxlength="500"
+            required
+          />
+          <button type="submit" id="sendBtn" aria-label="Enviar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M2 12L22 2L12 22L10 14L2 12Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <aside class="info-panel">
+        <h3>📊 Demo en vivo para RR.HH.</h3>
+        <p class="info-desc">Esta es una <strong>simulación funcional</strong> del asistente que reemplazaría las respuestas manuales del área de delivery.</p>
+
+        <div class="info-block">
+          <h4>✅ Pruebe estas situaciones reales:</h4>
+          <ul>
+            <li>Errores de tipeo (ej: "qe productos tienen")</li>
+            <li>Producto que no vendemos (ej: "tienen creatina?")</li>
+            <li>Consulta sobre envío (ej: "llega hoy a Surco?")</li>
+            <li>Síntoma del cliente (ej: "estoy hinchado")</li>
+            <li>Preguntas sobre dosis o ingredientes</li>
+          </ul>
+        </div>
+
+        <div class="info-block highlight">
+          <h4>💰 Comparativa</h4>
+          <div class="compare-row">
+            <div class="compare-col">
+              <strong>HOY (manual)</strong>
+              <ul>
+                <li>1-4h respuesta</li>
+                <li>Solo horario laboral</li>
+                <li>1 cliente a la vez</li>
+                <li>Errores humanos</li>
+                <li>Costo: salarios</li>
+              </ul>
+            </div>
+            <div class="compare-col compare-bot">
+              <strong>CON BOT</strong>
+              <ul>
+                <li>2 segundos</li>
+                <li>24/7</li>
+                <li>Ilimitados</li>
+                <li>Info siempre exacta</li>
+                <li>Costo: ~S/ 0.05 por chat</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <h4>🚀 Próximo paso si aprueban</h4>
+          <p>Conectar este mismo cerebro a WhatsApp Business e Instagram para responder automáticamente a clientes reales.</p>
+        </div>
+
+        <div class="footer-note">
+          Demo creada para Inversiones Verdi · Datos del catálogo de inversionesverdi.com
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

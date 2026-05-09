@@ -1,0 +1,15 @@
+{
+  "name": "verdi-demo-bot",
+  "version": "1.0.0",
+  "description": "Demo de bot conversacional para Inversiones Verdi - Suplementos naturales",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "openai": "^4.77.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

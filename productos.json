@@ -1,0 +1,210 @@
+{
+  "productos": [
+    {
+      "id": "digest-gold",
+      "nombre": "Digest Gold",
+      "marca": "Enzymedica",
+      "categoria": "Enzimas digestivas",
+      "presentacion": "45 cápsulas",
+      "precio": 117,
+      "precio_original": 130,
+      "descuento": "10%",
+      "url": "https://inversionesverdi.com/product/enzimas-digestivas-enzymedica-digest-gold-45cap/",
+      "para_que_sirve": "Ayuda a descomponer eficazmente proteínas, grasas, carbohidratos, fibra y lactosa. Apoyo digestivo diario y para molestias después de comidas pesadas.",
+      "beneficios": [
+        "Reduce gases, hinchazón e indigestión",
+        "Descompone grasas, fibra, proteínas y carbohidratos",
+        "Mejora aprovechamiento de nutrientes",
+        "Convierte alimentos en mayor energía (con ATPro)"
+      ],
+      "ingredientes_clave": "Amilasa, Proteasa, Glucoamilasa, Lipasa, Lactasa, Celulasa, Beta Glucanasa, Maltasa, Pectinasa, Xilanasa, Hemicelulasa, Invertasa, ATP, magnesio, fitasa, Coenzima Q10",
+      "dosis": "1 cápsula con cada comida principal (3 al día)",
+      "caracteristicas": ["Non-GMO", "Sin gluten", "Apto veganos", "Kosher", "Tecnología Thera-Blend®"],
+      "advertencias": "No usar durante embarazo o lactancia sin consultar profesional"
+    },
+    {
+      "id": "digest-spectrum",
+      "nombre": "Digest Spectrum",
+      "marca": "Enzymedica",
+      "categoria": "Enzimas digestivas",
+      "presentacion": "90 cápsulas",
+      "precio": 179.10,
+      "precio_original": 199,
+      "descuento": "10%",
+      "url": "https://inversionesverdi.com/product/enzimas-digest-spectrum/",
+      "para_que_sirve": "Mezcla de enzimas digestivas de ALTA POTENCIA para descomponer carbohidratos, grasas, proteínas y fibras de alimentos difíciles de digerir. Ideal para múltiples intolerancias alimentarias.",
+      "beneficios": [
+        "Reduce gases, hinchazón e indigestión",
+        "Maneja intolerancias a gluten, lácteos y fenoles",
+        "Convierte alimentos en mayor energía",
+        "Sirve para múltiples intolerancias simultáneas",
+        "Cubre todo el rango de pH digestivo"
+      ],
+      "diferencia_con_digest_gold": "Digest Spectrum es más POTENTE y está diseñado especialmente para personas con MÚLTIPLES INTOLERANCIAS alimentarias (gluten, lácteos, fenoles). Digest Gold es para apoyo digestivo diario general.",
+      "dosis": "2 cápsulas con cada comida principal",
+      "caracteristicas": ["Non-GMO", "Sin gluten", "Apto veganos", "Kosher", "Sin colorantes", "Thera-Blend®"],
+      "advertencias": "Contiene sulfitos naturales. Puede contener trazas de soya, trigo o leche"
+    },
+    {
+      "id": "probiotic-bloat",
+      "nombre": "Probiotic for Bloat",
+      "marca": "Enzymedica",
+      "categoria": "Probióticos",
+      "presentacion": "30 cápsulas",
+      "precio": 144,
+      "precio_original": 180,
+      "descuento": "20%",
+      "url": "https://inversionesverdi.com/product/enzymedica-probiotico-for-bloat/",
+      "para_que_sirve": "Probiótico de 50 mil millones de UFC con 11 cepas, especialmente diseñado para reducir HINCHAZÓN ABDOMINAL y gases ocasionales.",
+      "beneficios": [
+        "Reduce hinchazón abdominal (bloat)",
+        "Disminuye gases ocasionales",
+        "Mejora balance intestinal",
+        "Refuerza inmunidad",
+        "7 cepas clínicamente estudiadas para reducir hinchazón"
+      ],
+      "cepas_principales": "Lactobacillus plantarum (mayoría), L. paracasei, L. acidophilus, L. casei, B. bifidum, L. rhamnosus, L. fermentum, Bacillus subtilis BS50™ y DE111®, B. coagulans, L. acidophilus DDS®-1",
+      "ufc": "50 mil millones de UFC",
+      "dosis": "1 cápsula al día, con o sin alimentos",
+      "caracteristicas": ["Non-GMO", "Vegano", "Kosher", "Sin gluten/soya/lácteos", "Liberación retardada"],
+      "advertencias": "Embarazadas/lactantes deben consultar antes"
+    },
+    {
+      "id": "probiotic-women",
+      "nombre": "Probiotic for Women",
+      "marca": "Enzymedica",
+      "categoria": "Probióticos",
+      "presentacion": "30 cápsulas",
+      "precio": 162,
+      "precio_original": 180,
+      "descuento": "10%",
+      "url": "https://inversionesverdi.com/product/enzymedica-probiotico-for-women/",
+      "para_que_sirve": "Probiótico de 50 mil millones de UFC formulado ESPECÍFICAMENTE para la salud íntima femenina y microbiota vaginal.",
+      "beneficios": [
+        "Mantiene equilibrio de microbiota vaginal",
+        "Apoyo en vaginosis bacteriana recurrente",
+        "Apoyo en infecciones urinarias frecuentes",
+        "Salud genitourinaria a largo plazo",
+        "Restaura microbiota intestinal",
+        "Refuerza inmunidad"
+      ],
+      "cepas_principales": "Lactobacillus plantarum, L. reuteri RC-14™, L. rhamnosus GR-1™, Saccharomyces boulardii, más 7 cepas adicionales de Lactobacillus y Bifidobacterium",
+      "ufc": "50 mil millones de UFC",
+      "dosis": "1 cápsula al día, con o sin alimentos",
+      "caracteristicas": ["Non-GMO", "Vegano", "Kosher", "Sin gluten/lácteos/soya", "Liberación retardada"],
+      "advertencias": "Conservar bajo 25°C"
+    },
+    {
+      "id": "neuromega-jr",
+      "nombre": "Neuromega Jr.",
+      "marca": "Herbasanté",
+      "categoria": "Omega-3",
+      "presentacion": "100 ml líquido (sabor naranja)",
+      "precio": 160,
+      "descuento": null,
+      "url": "https://inversionesverdi.com/product/herbasante-neuromega-jr-100-ml/",
+      "para_que_sirve": "Omega-3 líquido de alta potencia para NIÑOS Y ADOLESCENTES. Apoya desarrollo cerebral, visión y sistema nervioso.",
+      "para_quien": "Niños de 1 a 18 años",
+      "beneficios": [
+        "Desarrollo cerebral",
+        "Salud visual",
+        "Sistema nervioso",
+        "Memoria y aprendizaje",
+        "Atención y concentración"
+      ],
+      "composicion": "2,750 mg DHA + 275 mg EPA por cucharadita (5 ml)",
+      "dosis": "Niños 1-13 años: ½ cucharadita (2.5 ml) al día con comidas. Adolescentes 14-18 años: ¾ cucharadita (3.75 ml) al día",
+      "sabor": "Naranja",
+      "caracteristicas": ["Non-GMO", "Líquido (mejor absorción)", "Refrigerar después de abrir", "Agitar antes de usar"]
+    },
+    {
+      "id": "neuromega-d3",
+      "nombre": "Neuromega + D3",
+      "marca": "Herbasanté",
+      "categoria": "Omega-3",
+      "presentacion": "150 ml líquido (sabor lima-limón)",
+      "precio": 195,
+      "descuento": null,
+      "url": "https://inversionesverdi.com/product/omega3-herbasante-neuromega-d3-150ml/",
+      "para_que_sirve": "Omega-3 líquido + Vitamina D3 para ADULTOS y adolescentes. Salud cerebral, visión e inmunidad.",
+      "para_quien": "Adolescentes 14+ años y adultos",
+      "beneficios": [
+        "Salud cerebral y memoria",
+        "Salud visual",
+        "Refuerzo inmunológico (con D3)",
+        "Mejor absorción por presentación líquida",
+        "Para personas que consumen poco pescado"
+      ],
+      "composicion": "Por cucharadita (5 ml): 2,750 mg DHA + 250 mg EPA + 1,000 IU Vitamina D3",
+      "dosis": "Adultos: 1 cucharadita (5 ml) al día con comidas. Adolescentes 14-18 años: ¾ cucharadita (3.75 ml) al día",
+      "sabor": "Lima-limón",
+      "caracteristicas": ["Non-GMO", "Líquido", "Refrigerar después de abrir", "Agitar antes de usar"],
+      "advertencias": "Embarazadas/lactantes consultar antes"
+    }
+  ],
+  "empresa": {
+    "nombre": "Inversiones Verdi - Verdi Naturals",
+    "slogan": "Suplementos Nutricionales Premium",
+    "descripcion": "Tienda peruana especializada en suplementos nutricionales premium importados de USA y Canadá, con materias primas de calidad y respaldo científico.",
+    "direccion": "Av. César Canevaro N°1286, Lince, Lima, Perú",
+    "telefono": "+51 965 104 609",
+    "whatsapp": "+51 965 104 609",
+    "emails": {
+      "pedidos": "deliveryperu@inversionesverdi.com",
+      "pedidos_alterno": "deliveryperu2@inversionesverdi.com",
+      "soporte": "sistemas@inversionesverdi.com"
+    },
+    "redes_sociales": {
+      "facebook": "VerdiNaturalsPeru",
+      "instagram": "@verdinaturals",
+      "tiktok": "@verdi.naturals"
+    },
+    "categorias": ["Enzimas", "Probióticos", "Vitaminas y Minerales", "Omega 3"],
+    "marcas": ["Enzymedica", "Herbasanté"],
+    "web": "https://inversionesverdi.com"
+  },
+  "envios": {
+    "lima_metropolitana": {
+      "costo": "Desde S/ 10",
+      "tiempo": "1 a 2 días hábiles",
+      "regla_misma_dia": "Si pagas ANTES de las 10:00 AM, llega el MISMO DÍA. Si pagas después, llega al día siguiente",
+      "cobertura": "Toda Lima Metropolitana"
+    },
+    "provincia": {
+      "costo": "Desde S/ 20",
+      "tiempo": "1 a 3 días hábiles",
+      "cobertura": "Todo el Perú vía agencia de transporte"
+    },
+    "notificacion": "Te enviamos la fecha estimada de entrega tras confirmar tu pago"
+  },
+  "pagos": {
+    "tarjetas": ["Visa", "Mastercard", "American Express", "Diners"],
+    "billeteras": ["Yape", "Saldo Mercado Pago"],
+    "efectivo": "PagoEfectivo (BCP, BBVA, etc.) con código de pago"
+  },
+  "devoluciones": {
+    "plazo": "7 días calendario desde la entrega",
+    "condiciones": "Producto sellado, con etiquetas originales, sin abrir ni manipular",
+    "requisitos": "Fotos o videos que justifiquen el motivo"
+  },
+  "atencion": {
+    "canales": ["WhatsApp", "Email", "Web"],
+    "telefono": "+51 965 104 609",
+    "respuesta_humana": "Hasta 1-4 horas en horario laboral",
+    "respuesta_bot": "Inmediata 24/7"
+  },
+  "recomendaciones_cruzadas": {
+    "digestion_general": "Digest Gold",
+    "intolerancias_multiples": "Digest Spectrum",
+    "hinchazon_y_gases": "Probiotic for Bloat",
+    "salud_intima_femenina": "Probiotic for Women",
+    "infecciones_urinarias_recurrentes": "Probiotic for Women",
+    "vaginosis_recurrente": "Probiotic for Women",
+    "ninos_concentracion": "Neuromega Jr.",
+    "ninos_desarrollo_cerebral": "Neuromega Jr.",
+    "memoria_adultos": "Neuromega + D3",
+    "vista_adultos": "Neuromega + D3",
+    "inmunidad": "Neuromega + D3 (tiene D3) o Probiotic for Bloat",
+    "energia": "Digest Gold (mejora aprovechamiento de nutrientes)"
+  }
+}
