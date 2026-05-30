@@ -48,6 +48,8 @@ function formatContent(text) {
     .replace(/>/g, '&gt;');
 
   return escaped
+    // images ![alt](url) -> <img> (acepta URL http o ruta /relativa). Se oculta si la imagen no existe.
+    .replace(/!\[([^\]]*)\]\((https?:\/\/[^\)\s]+|\/[^\)\s]+)\)/g, '<img src="$2" alt="$1" class="chat-img" onerror="this.style.display=\'none\'">')
     // **bold**
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     // *bold* (single asterisk - WhatsApp style)

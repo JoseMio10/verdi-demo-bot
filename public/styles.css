@@ -578,3 +578,14 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Imagen del QR / imágenes dentro de los mensajes del bot */
+.chat-img {
+  display: block;
+  max-width: 230px;
+  width: 100%;
+  height: auto;
+  margin: 10px 0 4px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}

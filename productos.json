@@ -178,9 +178,27 @@
     "notificacion": "Te enviamos la fecha estimada de entrega tras confirmar tu pago"
   },
   "pagos": {
+    "metodos": [
+      "Transferencia bancaria BCP",
+      "Depósito en agente BCP",
+      "QR Yape / Plin (se paga escaneando el QR, sin número)",
+      "Link de pago (tarjeta)"
+    ],
     "tarjetas": ["Visa", "Mastercard", "American Express", "Diners"],
-    "billeteras": ["Yape", "Saldo Mercado Pago"],
-    "efectivo": "PagoEfectivo (BCP, BBVA, etc.) con código de pago"
+    "cuenta_bcp": {
+      "titular": "Inversiones y Distribuidora Verdi S.A.C.",
+      "ruc": "20608648489",
+      "moneda": "Soles (PEN)",
+      "cuenta_corriente": "193-9892480-0-38",
+      "cci": "00219300989248003810"
+    },
+    "yape_plin": {
+      "como_pagar": "Únicamente escaneando nuestro QR. Yape y Plin usan el MISMO QR.",
+      "numero": "NO existe un número de Yape/Plin por política de la empresa. Solo se paga por QR.",
+      "imagen_qr": "/qr-yape-plin.png"
+    },
+    "link_pago": "Generamos un link de pago para pagar con tarjeta (Visa, Mastercard, American Express, Diners).",
+    "comprobante": "Tras pagar (por cualquier método) el cliente debe ENVIAR su comprobante/captura para confirmar el pedido."
   },
   "devoluciones": {
     "plazo": "7 días calendario desde la entrega",
