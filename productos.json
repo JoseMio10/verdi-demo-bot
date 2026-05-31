@@ -191,7 +191,7 @@
       "modalidades": "Dos opciones: SHALOM (recojo en agencia: el cliente retira en la agencia de su ciudad/distrito) o URBANO (entrega a domicilio).",
       "como_elegir": "Pregunta SIEMPRE la ciudad y el distrito del cliente y si prefiere recojo en agencia (Shalom) o entrega a domicilio (Urbano).",
       "agencia_shalom": "No damos la dirección exacta de la agencia desde el bot; el cliente puede ubicar su agencia Shalom más cercana buscando su distrito en la web de Shalom, y un asesor confirma agencia y costo final por WhatsApp.",
-      "datos_requeridos": "Para provincia pedir nombre completo, DNI, ciudad/distrito y modalidad (Shalom o Urbano)."
+      "datos_requeridos": "Para COTIZAR un envío a provincia basta con la ciudad/distrito y la modalidad (Shalom o Urbano). El nombre completo y el DNI se piden recién al CONFIRMAR el pedido, NO para cotizar."
     },
     "recojo_en_tienda": "Sí. El cliente puede comprar o recoger en nuestra tienda física: Av. César Canevaro N°1286, Lince, Lima.",
     "registro_pedidos": "Los pedidos pagados después de las 5:00 pm (Lun-Vie), después de las 12:00 pm (Sáb), o en domingos/feriados, se registran el siguiente día útil desde las 8:00 am.",
@@ -223,7 +223,7 @@
   },
   "comprobantes": {
     "tipos": "Emitimos BOLETA o FACTURA, según lo que indique el cliente.",
-    "factura": "Para factura, el cliente debe dar su RUC y razón social al hacer el pedido. Una vez emitida la factura no hay refacturación.",
+    "factura": "Para emitir FACTURA, PIDE al cliente SU RUC y razón social (es el RUC del cliente, no el de la empresa). Una vez emitida la factura no hay refacturación.",
     "voucher": "El comprobante/voucher de pago se envía por WhatsApp +51 965 104 609 o al correo deliveryperu@inversionesverdi.com."
   },
   "devoluciones": {
@@ -233,7 +233,7 @@
     "cambios": "Solo por un producto de igual o mayor precio (pagando la diferencia). Si el cambio es por uno de menor precio, se reembolsa la diferencia.",
     "quien_paga_reenvio": "El reenvío es GRATIS (lo cubre Verdi) cuando el problema es por el motorizado, porque el producto no corresponde al pedido, o porque llegó dañado. En otros casos lo coordina el cliente.",
     "reembolso": "Se procesa hasta en 7 días hábiles tras recibir el producto en almacén, a la misma cuenta de origen y en soles (S/).",
-    "producto_danado_en_transporte": "Si llega dañado, reportar con fotos dentro de las primeras 48 horas; en ese caso el reenvío no tiene costo."
+    "producto_danado_en_transporte": "Si llega dañado, reportar con fotos apenas lo recibas (lo antes posible); en ese caso el reenvío no tiene costo."
   },
   "atencion": {
     "canales": ["WhatsApp", "Email", "Web", "Tienda física"],
