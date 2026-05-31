@@ -29,17 +29,88 @@ const PUBLIC_DIR = path.join(__dirname, 'public');
 // Cargar productos.json
 const knowledge = JSON.parse(fs.readFileSync(path.join(__dirname, 'productos.json'), 'utf-8'));
 
-// ============ System Prompt ============
-const SYSTEM_PROMPT = buildSystemPrompt(knowledge);
+// ============ Sincronización de precios en vivo (WooCommerce Store API) ============
+const STORE_API_URL = 'https://inversionesverdi.com/wp-json/wc/store/v1/products?per_page=100';
+const PRICE_TTL_MS = 5 * 60 * 1000; // refresca precios cada 5 minutos
+let _priceCache = { at: 0, map: null };
 
-function buildSystemPrompt(k) {
-  const productos = k.productos.map(p => {
+function _slugFromUrl(url) {
+  const m = (url || '').match(/\/product\/([^\/?#]+)/);
+  return m ? m[1] : null;
+}
+
+async function fetchLivePrices() {
+  const now = Date.now();
+  if (_priceCache.map && now - _priceCache.at < PRICE_TTL_MS) return _priceCache.map;
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 4500);
+    const res = await fetch(STORE_API_URL, { signal: controller.signal, headers: { Accept: 'application/json' } });
+    clearTimeout(timer);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const list = await res.json();
+    const map = {};
+    for (const p of (Array.isArray(list) ? list : [])) {
+      const pr = p.prices || {};
+      const minor = parseInt(pr.currency_minor_unit != null ? pr.currency_minor_unit : 2, 10);
+      const div = Math.pow(10, minor) || 1;
+      const price = (pr.price != null && pr.price !== '') ? Number(pr.price) / div : null;
+      const regular = (pr.regular_price != null && pr.regular_price !== '') ? Number(pr.regular_price) / div : null;
+      const onSale = !!p.on_sale && !!regular && !!price && regular > price;
+      map[p.slug] = {
+        precio: price,
+        precio_original: onSale ? regular : null,
+        descuento: onSale ? (Math.round((1 - price / regular) * 100) + '%') : null,
+        in_stock: p.is_in_stock !== false,
+      };
+    }
+    _priceCache = { at: now, map };
+    return map;
+  } catch (e) {
+    console.error('No se pudo sincronizar precios en vivo:', e.message);
+    return _priceCache.map; // usa caché previa si existe; si no, null -> precios del JSON
+  }
+}
+
+function mergeLivePrices(productos, priceMap) {
+  if (!priceMap) return productos;
+  return productos.map(p => {
+    const slug = _slugFromUrl(p.url);
+    const live = slug ? priceMap[slug] : null;
+    if (live && live.precio != null) {
+      return { ...p, precio: live.precio, precio_original: live.precio_original, descuento: live.descuento, sin_stock: live.in_stock === false };
+    }
+    return p;
+  });
+}
+
+// ============ System Prompt (con precios sincronizados + caché) ============
+const PROMPT_TTL_MS = 5 * 60 * 1000;
+let _promptCache = { at: 0, text: null };
+
+async function getSystemPrompt() {
+  const now = Date.now();
+  if (_promptCache.text && now - _promptCache.at < PROMPT_TTL_MS) return _promptCache.text;
+  let productos = knowledge.productos;
+  try {
+    const priceMap = await fetchLivePrices();
+    productos = mergeLivePrices(knowledge.productos, priceMap);
+  } catch (e) {
+    console.error('Precios en vivo no disponibles, uso catálogo local:', e.message);
+  }
+  const text = buildSystemPrompt(knowledge, productos);
+  _promptCache = { at: now, text };
+  return text;
+}
+
+function buildSystemPrompt(k, productosOverride) {
+  const productos = (productosOverride || k.productos).map(p => {
     return `─────────────────────────────
 PRODUCTO: ${p.nombre} (${p.marca})
 ID: ${p.id}
 Categoría: ${p.categoria}
 Presentación: ${p.presentacion}
-Precio: S/ ${p.precio}${p.precio_original ? ` (antes S/ ${p.precio_original}, descuento ${p.descuento})` : ''}
+Precio: S/ ${p.precio}${p.precio_original ? ` (antes S/ ${p.precio_original}, descuento ${p.descuento})` : ''}${p.sin_stock ? ' ⚠️ AGOTADO TEMPORALMENTE' : ''}
 Para qué sirve: ${p.para_que_sirve}
 ${p.para_quien ? `Para quién: ${p.para_quien}` : ''}
 Beneficios: ${(p.beneficios || []).join(' / ')}
@@ -187,7 +258,7 @@ Tú: "Para la digestión te recomiendo nuestros 3 productos estrella:
 Apoyo digestivo diario para gases, hinchazón y pesadez.
 [Ver producto](URL)
 
-*2. Digest Spectrum* (90 cap) - S/ 179.10 (10% off)
+*2. Digest Spectrum* (90 cap) - S/ 199
 Más potente. Ideal si tienes intolerancias múltiples (gluten, lácteos).
 [Ver producto](URL)
 
@@ -244,10 +315,12 @@ async function handleChat(req, res) {
     // Limitar el historial a 20 últimos mensajes para no agotar tokens
     const recent = messages.slice(-20);
 
+    const systemPrompt = await getSystemPrompt();
+
     const completion = await getOpenAI().chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: SYSTEM_PROMPT },
+        { role: 'system', content: systemPrompt },
         ...recent,
       ],
       temperature: 0.7,

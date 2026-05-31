@@ -28,9 +28,9 @@
       "marca": "Enzymedica",
       "categoria": "Enzimas digestivas",
       "presentacion": "90 cápsulas",
-      "precio": 179.10,
-      "precio_original": 199,
-      "descuento": "10%",
+      "precio": 199,
+      "precio_original": null,
+      "descuento": null,
       "url": "https://inversionesverdi.com/product/enzimas-digest-spectrum/",
       "para_que_sirve": "Mezcla de enzimas digestivas de ALTA POTENCIA para descomponer carbohidratos, grasas, proteínas y fibras de alimentos difíciles de digerir. Ideal para múltiples intolerancias alimentarias.",
       "beneficios": [
